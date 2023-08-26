@@ -1,3 +1,69 @@
-.header {
-    font-family: 'RobotoRegularItalic';
+.weather {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 2rem;
+
+    &--summary {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+
+        .info, .icon {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info {
+            * {
+                text-align: center;
+            }
+
+            &--city {
+                font-size: 1.6rem;
+                color: var(--font-color-300);
+            }
+
+            &--temperature {
+                font-size: 4rem;
+            }
+
+            &--date {
+                font-size: 1.2rem;
+                color: var(--font-color-300);
+            }
+        }
+    }
+
+    &--details {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        .detail {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+
+            &--key {
+                display: flex;
+                flex: 1;
+                font-size: 2rem;
+                color: var(--font-color-300);
+            }
+
+            &--value {
+                display: flex;
+                flex: 1;
+                font-size: 2.4rem;
+
+                span {
+                    color: var(--font-color-300);
+                }
+            }
+        }
+    }
 }
