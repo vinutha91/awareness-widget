@@ -4,8 +4,15 @@
 
 :root {
     --background: #0b0c10;
-    --font-color-primary: #f3f5f5;
-    --font-color-secondary: #9e9fa3
+
+    --font-color-100: #f3f5f5;
+    --font-color-200: #9aa1a9;
+    --font-color-300: #9e9fa3;
+    --font-color-400: #515862;
+
+    --severity-low: #008000;
+    --severity-medium: #fdd213;
+    --severity-high: #f10700;
 }
 
 html, body {
@@ -36,5 +43,5 @@ body {
 
 * {
     font-family: 'RobotoRegular';
-    color: var(--font-color-primary);
+    color: var(--font-color-100);
 }
