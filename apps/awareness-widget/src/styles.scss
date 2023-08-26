@@ -2,6 +2,12 @@
 @import 'styles/resets/reset';
 @import 'styles/fonts/fonts';
 
+:root {
+    --background: #0b0c10;
+    --font-color-primary: #f3f5f5;
+    --font-color-secondary: #9e9fa3
+}
+
 html, body {
     height: 100%;
     width: 100%;
@@ -12,6 +18,7 @@ html, body {
 // 1rem = 10px
 html {
     font-size: 10px;
+    background-color: var(--background);
 }
 
 body {
@@ -29,4 +36,5 @@ body {
 
 * {
     font-family: 'RobotoRegular';
+    color: var(--font-color-primary);
 }
