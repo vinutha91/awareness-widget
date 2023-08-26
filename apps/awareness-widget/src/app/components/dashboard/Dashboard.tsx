@@ -2,7 +2,7 @@ import './dashboard.scss';
 
 export const Dashboard = () =>{
 
-    return  <div>
+    return  <div className='dashboard'>
       <p>
           Melbourne
       </p>
