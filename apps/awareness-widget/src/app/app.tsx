@@ -6,11 +6,11 @@ import { Weather } from './components/weather/Weather';
 
 export function App() {
   return (      
-      <div>
+      <>
         <Weather />
         <RouteInfo />
         <Dashboard />
-      </div>
+      </>
   );
 }
 
