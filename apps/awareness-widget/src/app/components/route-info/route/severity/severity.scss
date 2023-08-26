@@ -1,0 +1,17 @@
+.severity {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+
+    &--low {
+        background-color: var(--severity-low);
+    }
+
+    &--medium {
+        background-color: var(--severity-medium);
+    }
+
+    &--high {
+        background-color: var(--severity-high);
+    }
+}
