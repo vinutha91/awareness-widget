@@ -1,0 +1,43 @@
+@mixin flex() {
+    display: flex;
+}
+
+@mixin flexColumn() {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexRow() {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin fullFlex() {
+    display: flex;
+    flex: 1;
+}
+
+@mixin fullFlexColumn() {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+@mixin fullFlexRow() {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+@mixin flexCenter() {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexCenterContentVertical() {
+    align-items: center;
+}
+
+@mixin flexCenterContentHorizontal() {
+    justify-content: center;
+}
