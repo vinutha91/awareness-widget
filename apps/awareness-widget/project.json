@@ -1,0 +1,83 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/awareness-widget/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/awareness-widget",
+        "index": "apps/awareness-widget/src/index.html",
+        "baseHref": "/",
+        "main": "apps/awareness-widget/src/main.tsx",
+        "polyfills": "apps/awareness-widget/src/polyfills.ts",
+        "tsConfig": "apps/awareness-widget/tsconfig.app.json",
+        "assets": [
+          "apps/awareness-widget/src/favicon.ico",
+          "apps/awareness-widget/src/assets"
+        ],
+        "styles": ["apps/awareness-widget/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/awareness-widget/src/environments/environment.ts",
+              "with": "apps/awareness-widget/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "awareness-widget:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "awareness-widget:build:development"
+        },
+        "production": {
+          "buildTarget": "awareness-widget:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/awareness-widget/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/awareness-widget"],
+      "options": {
+        "jestConfig": "apps/awareness-widget/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
