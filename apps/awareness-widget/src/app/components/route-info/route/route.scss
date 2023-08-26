@@ -1,0 +1,69 @@
+// TODO: find out the compilation error
+@import '../../../../styles/mixins/mixins';
+
+.route {
+    @include fullFlexColumn();
+    &--summary, &--info {
+        @include fullFlexRow();
+    }
+
+    &--summary {
+        .summary {
+            &--severity {
+                @include flex();
+                flex: 0 1 2.5rem;
+                @include flexCenter();
+            }
+    
+            &--name {
+                @include fullFlex();
+                @include flexCenterContentVertical();
+
+                font-size: 1.8rem;
+                color: var(--font-color-200);
+            }
+    
+            &--distance {
+                @include flex();
+                flex: 0 1 5rem;
+                @include flexCenter();
+
+                font-size: 1.6rem;
+                color: var(--font-color-400);
+            }
+        }
+    }
+
+    &--info {
+        .info {
+            &--direction {
+                @include flex();
+                flex: 0 1 2.5rem;
+                @include flexCenter();
+            }
+    
+            &--details {
+                @include fullFlexColumn();
+
+                .details {
+                    &--from, &--to {
+                        font-size: 1.6rem;
+                        color: var(--font-color-400)
+                    }
+                }
+            }
+    
+            &--delayTime {
+                @include flex();
+                flex: 0 1 5rem;
+                @include flexCenter();
+                align-items: baseline;
+                font-size: 3rem;
+
+                span {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
