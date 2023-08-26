@@ -22,8 +22,9 @@ body {
     .root {
         display: flex;
         flex: 1;
-        flex-direction: column;    
-    }
+        flex-direction: column;
+        padding: 1rem;
+      }
 }
 
 * {
