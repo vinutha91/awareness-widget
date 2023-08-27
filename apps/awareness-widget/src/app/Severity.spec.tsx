@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 import { Severity } from './components/route-info/route/severity/Severity';
 
