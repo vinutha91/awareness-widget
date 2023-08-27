@@ -23,8 +23,9 @@ export const useRampData = () =>{
         }, 0)
 
         const groupByAlgorithmPercentage = Object.keys(groupByAlgorithm).map((key: string) => {
+            const percentage = (groupByAlgorithm[key].length / totalRamps) * 100;
             return {
-                name: key,
+                name: `A${key.split(' ')[1]} (${percentage.toFixed(2)}%)`,
                 number: (groupByAlgorithm[key].length / totalRamps) * 100
             }
         });
