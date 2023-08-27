@@ -3,6 +3,9 @@ import './dashboard.scss';
 
 export const Dashboard = () =>{
     return  <div className='dashboard'>
+      <div className='dashboard--heading'>
+          <label>Ramp Chart</label>
+      </div>
       <DoughnutChart data={
         [
           {name: 'A', number: 10},

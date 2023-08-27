@@ -1,5 +1,19 @@
 .dashboard {
   margin-bottom: 2rem;
+  background-color: var(--background-secondary);
+  padding: 1rem 0 0 0;
+  border: 0.1rem solid var(--border);
+
+  &--heading {
+    border-bottom: 0.1rem solid var(--border);
+    padding: 0 2rem;
+
+    label {
+      text-transform: uppercase;
+      font-size: 2.4rem;
+      color: var(--font-color-300);
+    }
+  }
 }
 
 .round-chart {
