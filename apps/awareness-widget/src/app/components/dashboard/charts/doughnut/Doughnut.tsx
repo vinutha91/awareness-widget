@@ -12,6 +12,10 @@ export const DoughnutChart = ({ data }: any) => {
 
     d3.select(chartRef.current).selectAll('*').remove();
 
+    if (!data)  {
+        return;
+    }
+    
     const svg = d3.select(chartRef.current)
       .append('svg')
       .attr('width', width)
