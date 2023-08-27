@@ -36,6 +36,13 @@
                 color: var(--font-color-300);
             }
         }
+
+        .icon {
+            svg {
+                width: 13rem;
+                height: 13rem;
+            }
+        }
     }
 
     &--details {
@@ -52,16 +59,23 @@
                 display: flex;
                 flex: 1;
                 font-size: 2rem;
+                padding-left: 4rem;
                 color: var(--font-color-300);
             }
 
             &--value {
                 display: flex;
                 flex: 1;
+                padding-left: 7rem;
                 font-size: 2.4rem;
 
                 span {
                     color: var(--font-color-300);
+                }
+
+                svg {
+                    width: 3rem;
+                    height: 3rem;
                 }
             }
         }

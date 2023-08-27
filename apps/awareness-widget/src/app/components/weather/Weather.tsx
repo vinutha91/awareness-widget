@@ -17,7 +17,7 @@ export const Weather = () => {
             </p>
         </section>
         <section className="icon">
-            {Icons['cloudyDay1']}
+            {Icons['showers']}
         </section>
       </section>
       <section className="weather--details">
@@ -35,7 +35,7 @@ export const Weather = () => {
         </section>
         <section className="detail">
         <p className='detail--key'>Tomorrow</p>
-          <p className='detail--value'>30&deg; {Icons['cloudyDay1']}</p>
+          <p className='detail--value'>30&deg; {Icons['showers']}</p>
         </section>
       </section>
     </header>
