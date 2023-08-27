@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Icons } from '../icons/Icons';
 import './route-info.scss';
-import { Route } from './route/Route';
 import { ROUTES as routes } from './data/routes';
+import { Route } from './route/RouteDetails';
 
 export const RouteInfo = () => {
   const [showRouteInfo, setShowRouteInfo] = useState(true);
