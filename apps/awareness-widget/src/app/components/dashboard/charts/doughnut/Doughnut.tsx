@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
+import './doughnut.scss'
 
 export const DoughnutChart = ({ data }: any) => {
   const chartRef = useRef(null);
@@ -49,6 +50,6 @@ export const DoughnutChart = ({ data }: any) => {
   }, [data]);
 
   return (
-    <div ref={chartRef}></div>
+    <div className="chart" ref={chartRef}></div>
   );
 };
