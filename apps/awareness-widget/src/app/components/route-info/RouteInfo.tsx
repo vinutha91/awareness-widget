@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Icons } from '../icons/Icons';
 import './route-info.scss';
-import { Route } from './route/route';
+import { Route } from './route/Route';
 import { ROUTES as routes } from './data/routes';
 
 export const RouteInfo = () => {
