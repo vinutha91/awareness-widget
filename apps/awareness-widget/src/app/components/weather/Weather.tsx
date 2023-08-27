@@ -22,8 +22,8 @@ export const Weather = () => {
       </section>
       <section className="weather--details">
         <section className="detail">
-          <p className='detail--key'>Humidity</p>
-          <p className='detail--value'>50%</p>
+          <div className='detail--key'>Humidity</div>
+          <div className='detail--value'>50%</div>
         </section>
         <section className="detail">
         <p className='detail--key'>Chance of rain</p>
