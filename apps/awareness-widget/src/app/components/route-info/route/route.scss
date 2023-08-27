@@ -3,6 +3,9 @@
 
 .route {
     @include fullFlexColumn();
+    border-bottom: 0.1rem solid var(--border);
+    padding: 1rem 2rem;
+
     &--summary, &--info {
         @include fullFlexRow();
     }
