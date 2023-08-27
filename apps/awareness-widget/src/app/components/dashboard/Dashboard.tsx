@@ -3,12 +3,12 @@ import { DoughnutChart } from './charts/doughnut/Doughnut';
 import './dashboard.scss';
 import { useRampData } from './hooks/useRampData';
 import { Icons } from '../icons/Icons';
+import { clearRampAlgorithmsInterval } from '../../services/ramp-data.service';
 
 export const Dashboard = () => {
-  const { rampData } = useRampData();
-
   const [showDashboard, setShowDashboard] = useState(true);
-
+  const { rampData } = useRampData(showDashboard);
+  
   const toggleRouteInfo = () => {
     setShowDashboard(!showDashboard);
   };
@@ -16,7 +16,10 @@ export const Dashboard = () => {
   useEffect(() => {
     console.log(rampData);
   }, [rampData]);
-
+  
+  useEffect(() =>{
+    if(!showDashboard) clearRampAlgorithmsInterval();
+  },[showDashboard])
   return (
     <div className="dashboard">
       <div className="dashboard--heading">

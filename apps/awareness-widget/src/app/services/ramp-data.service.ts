@@ -1,8 +1,10 @@
 import { Ramps } from './models/ramps.model';
 
+let dataGeneratorInterval: NodeJS.Timer;
+
 export const getRampAlgorithms = (onUpdate: (ramps: Ramps) => void) => {
   const count = 50;
-  setInterval(() => {
+  dataGeneratorInterval = setInterval(() => {
     const ramps = [];
     for (let i = 0; i < count; i++) {
       ramps.push({
@@ -18,4 +20,8 @@ export const getRampAlgorithms = (onUpdate: (ramps: Ramps) => void) => {
     }
     onUpdate(ramps);
   }, 500);
+}
+
+export const clearRampAlgorithmsInterval = () => {
+  clearInterval(dataGeneratorInterval);
 }
