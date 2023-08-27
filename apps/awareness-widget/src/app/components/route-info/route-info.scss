@@ -5,6 +5,9 @@
   border: 0.1rem solid var(--border);
 
   &--heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 0.1rem solid var(--border);
     padding: 0 2rem;
 
@@ -12,6 +15,24 @@
       text-transform: uppercase;
       font-size: 2.4rem;
       color: var(--font-color-300);
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: var(--font-color-400);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    button.collapsed {
+        svg {
+            transform: rotate(-90deg);
+            transition: all 0.3s ease-in-out;
+        }
     }
   }
 }
