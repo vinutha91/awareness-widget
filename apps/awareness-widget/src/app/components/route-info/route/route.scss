@@ -32,7 +32,7 @@
                 @include flexCenter();
 
                 font-size: 1.6rem;
-                color: var(--font-color-400);
+                color: var(--font-color-500);
             }
         }
     }
@@ -51,7 +51,7 @@
                 .details {
                     &--from, &--to {
                         font-size: 1.6rem;
-                        color: var(--font-color-400)
+                        color: var(--font-color-500)
                     }
                 }
             }
