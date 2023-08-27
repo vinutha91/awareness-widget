@@ -5,6 +5,9 @@
   border: 0.1rem solid var(--border);
 
   &--heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 0.1rem solid var(--border);
     padding: 0 2rem;
 
@@ -13,19 +16,22 @@
       font-size: 2.4rem;
       color: var(--font-color-300);
     }
-  }
-}
 
-.round-chart {
-    width: 200px; /* Set an appropriate width and height */
-    height: 200px;
-    border-radius: 50%; /* Make it circular */
-    background: #f0f0f0; /* Set a background color */
-  
-    .chart-segment {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      clip-path: polygon(50% 50%, 100% 0, 100% 100%); /* Clip the segment */
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: var(--font-color-400);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    button.collapsed {
+      svg {
+        transform: rotate(-90deg);
+        transition: all 0.3s ease-in-out;
+      }
     }
   }
+}
