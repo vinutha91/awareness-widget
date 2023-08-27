@@ -4,7 +4,9 @@ import { Route } from './route/route';
 export const RouteInfo = () =>{
     return (
         <section className='routes'>
-            <label className='routes--heading'>Delayed Routes</label>
+            <div className='routes--heading'>
+                <label>Delayed Routes</label>
+            </div>
             <Route routeDetails={
                 {
                     id: 123,
