@@ -3,7 +3,10 @@
 @import 'styles/fonts/fonts';
 
 :root {
-    --background: #0b0c10;
+    --background-primary: #0b0c10;
+    --background-secondary: #161d27;
+
+    --border: #2e2e2e;
 
     --font-color-100: #f3f5f5;
     --font-color-200: #9aa1a9;
@@ -25,7 +28,7 @@ html, body {
 // 1rem = 10px
 html {
     font-size: 10px;
-    background-color: var(--background);
+    background-color: var(--background-primary);
 }
 
 body {
