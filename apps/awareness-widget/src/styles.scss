@@ -41,7 +41,7 @@ body {
     .root {
         display: flex;
         flex: 1;
-        flex-direction: column;
+        flex-direction: row;
         padding: 1rem;
       }
 }
@@ -49,4 +49,18 @@ body {
 * {
     font-family: 'RobotoRegular';
     color: var(--font-color-100);
+}
+
+.awareness-widget {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.app {
+    display: flex;
+    flex: 3;
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
 }
